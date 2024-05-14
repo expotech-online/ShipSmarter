@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ShipSmarter
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${application.datasource.url}
+    username: ${application.datasource.username}
+    password: ${application.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      enabled: true
+  profiles:
+    active: dev
